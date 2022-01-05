@@ -1,0 +1,21 @@
+﻿<Window x:Class="MyAnimeListApp.FirstStart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyAnimeListApp"
+        mc:Ignorable="d"
+        Title="Pierwsze uruchomienie" Height="270" Width="480">
+    <Grid AutomationProperties.IsOffscreenBehavior="Onscreen" Background="#FF4E4D4D" UseLayoutRounding="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="FStext" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="41,52,0,0" TextWrapping="Wrap" Text="Pierwsze uruchomienie" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display" FontStyle="Normal" FontWeight="Normal" FontSize="10" TextAlignment="Center" Foreground="#FFDDDDDD"/>
+        <Button x:Name="EntryC" Grid.Column="2" Content="Potwierdzam" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Height="41" Width="121" Click="Enter"/>
+        <Button x:Name="ToEN" Content="PL -> EN" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="399,10,0,0" VerticalAlignment="Top" FontSize="9" Click="ChangeEN"/>
+
+    </Grid>
+</Window>
