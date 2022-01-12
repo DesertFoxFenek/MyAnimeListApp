@@ -69,6 +69,8 @@ namespace MyAnimeListApp
                 //listofAnime.Items.Add(Name+"\t\t"+Status);
             }
 
+            listofAnime.Items.Clear();
+
             foreach (Anime anime in animes)
             {
                 listofAnime.Items.Add(anime.name);
@@ -99,6 +101,18 @@ namespace MyAnimeListApp
 
             textstatusoflist.Text = MsgStatus;
             textstatusoflist.Visibility = Visibility.Visible;
+        }
+
+        private void AddPosition(object sender, RoutedEventArgs e)
+        {
+            AddTitle addTitle = new AddTitle();
+            addTitle.Show();
+        }
+
+        private void RefContent(object sender, RoutedEventArgs e)
+        {
+            animes.Clear();
+            ReadFile();
         }
     }
 }

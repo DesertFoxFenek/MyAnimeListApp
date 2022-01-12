@@ -12,14 +12,24 @@
             <ColumnDefinition Width="399*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="SetingsButton" Grid.Column="1" HorizontalAlignment="Left" Margin="752,10,0,0" VerticalAlignment="Top" Foreground="{x:Null}" Width="20" Height="20" BorderBrush="{x:Null}" RenderTransformOrigin="0.621,0.592">
-            <Button.Background>
-                <ImageBrush ImageSource="/win10set.png"/>
-            </Button.Background>
+        <Button x:Name="SetingsButton" Grid.Column="1" HorizontalAlignment="Left" Margin="746,10,0,0" VerticalAlignment="Top" Foreground="Black" Width="20" Height="20" RenderTransformOrigin="0.621,0.592" Background="#FF707070" BorderBrush="#FF707070">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/icons8-settings-128.png"/>
+            </Button.OpacityMask>
         </Button>
         <ListBox x:Name="listofAnime" Grid.Column="1" Height="150" Margin="50,89,415,195" Background="{x:Null}" Foreground="#FFABADB3" FontSize="14" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="SelTitel"/>
         <TextBlock x:Name="texttitleoflist" Grid.Column="1" HorizontalAlignment="Left" Margin="50,40,0,0" TextWrapping="Wrap" Text="Lista tytułów" VerticalAlignment="Top" FontSize="24" Foreground="#FFABADB3"/>
         <TextBlock x:Name="textstatusoflist" Grid.Column="1" HorizontalAlignment="Left" Margin="50,244,0,0" TextWrapping="Wrap" Text="Stan obecny: " VerticalAlignment="Top" FontSize="24" Foreground="#FFABADB3" Width="277" OpacityMask="#FFABADB3" Visibility="Visible"/>
+        <Button x:Name="RefCon" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="721,10,0,0" VerticalAlignment="Top" Width="20" Height="20" Background="#FF707070" Click="RefContent">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/icons8-rotate-96.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="AddCon" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="696,10,0,0" VerticalAlignment="Top" Width="20" Height="20" Background="#FF707070" Click="AddPosition">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/icons8-forward-arrow-96.png"/>
+            </Button.OpacityMask>
+        </Button>
 
     </Grid>
 </Window>
