@@ -77,8 +77,9 @@ namespace MyAnimeListApp
             }
         }
 
-        private void SelTitel(object sender, SelectionChangedEventArgs e)
+        private void SelTitel(object sender, MouseButtonEventArgs e)
         {
+
             int Status = 0;
             string MsgStatus;
             string SelectedName = listofAnime.SelectedItem.ToString();
@@ -86,7 +87,7 @@ namespace MyAnimeListApp
             var Result = from anime in animes
                          where anime.name == SelectedName
                          select anime;
-                       
+
 
             foreach (var result in Result)
             {
@@ -113,6 +114,54 @@ namespace MyAnimeListApp
         {
             animes.Clear();
             ReadFile();
+        }
+
+        private void Del_pos(object sender, RoutedEventArgs e)
+        {
+            int index = listofAnime.SelectedIndex;
+
+            animes.RemoveAt(index);
+            listofAnime.SelectedItem = null;
+            listofAnime.Items.Clear();
+
+            File.Delete(infotext);
+
+            StreamWriter sw = new StreamWriter(infotext);
+
+            foreach (Anime anime in animes)
+            {
+                string ToSave = anime.name + "\t" + anime.status;
+
+                sw.WriteLine(ToSave);
+            }
+
+            sw.Close();
+
+            RefContent(sender, e);
+            textstatusoflist.Visibility = Visibility.Hidden;
+        }
+
+        private void Chanage_Stat(object sender, RoutedEventArgs e)
+        {
+            int index = listofAnime.SelectedIndex;
+
+            if (animes[index].status < 2)
+            {
+                animes[index].status += 1;
+
+                File.Delete(infotext);
+
+                StreamWriter sw = new StreamWriter(infotext);
+
+                foreach (Anime anime in animes)
+                {
+                    string ToSave = anime.name + "\t" + anime.status;
+
+                    sw.WriteLine(ToSave);
+                }
+
+                sw.Close();
+            }
         }
     }
 }

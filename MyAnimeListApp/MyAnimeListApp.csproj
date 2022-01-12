@@ -152,5 +152,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-done-96.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hexagon-synchronize-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,17 @@
                 <ImageBrush ImageSource="/icons8-settings-128.png"/>
             </Button.OpacityMask>
         </Button>
-        <ListBox x:Name="listofAnime" Grid.Column="1" Height="150" Margin="50,89,415,195" Background="{x:Null}" Foreground="#FFABADB3" FontSize="14" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="SelTitel"/>
+        <ListBox x:Name="listofAnime" Grid.Column="1" Height="150" Margin="50,89,415,195" Background="{x:Null}" Foreground="#FFABADB3" FontSize="14" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="SelTitel">
+            <ListBox.ContextMenu>
+                <ContextMenu Name="cmListBox">
+                    <MenuItem Header="Zmień status"
+                              Click="Chanage_Stat">
+                    </MenuItem>
+                    <MenuItem Header="Usuń pozycje"
+                              Click="Del_pos"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
         <TextBlock x:Name="texttitleoflist" Grid.Column="1" HorizontalAlignment="Left" Margin="50,40,0,0" TextWrapping="Wrap" Text="Lista tytułów" VerticalAlignment="Top" FontSize="24" Foreground="#FFABADB3"/>
         <TextBlock x:Name="textstatusoflist" Grid.Column="1" HorizontalAlignment="Left" Margin="50,244,0,0" TextWrapping="Wrap" Text="Stan obecny: " VerticalAlignment="Top" FontSize="24" Foreground="#FFABADB3" Width="277" OpacityMask="#FFABADB3" Visibility="Visible"/>
         <Button x:Name="RefCon" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="721,10,0,0" VerticalAlignment="Top" Width="20" Height="20" Background="#FF707070" Click="RefContent">
@@ -30,6 +40,5 @@
                 <ImageBrush ImageSource="/icons8-forward-arrow-96.png"/>
             </Button.OpacityMask>
         </Button>
-
     </Grid>
 </Window>

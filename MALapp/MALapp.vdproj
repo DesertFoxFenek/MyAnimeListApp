@@ -188,7 +188,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MALapp"
         "ProductCode" = "8:{56165339-7043-4E47-A86D-C57942E51E74}"
-        "PackageCode" = "8:{A837F35D-C60B-4E61-AC6A-BEAD19C912AB}"
+        "PackageCode" = "8:{F6429A89-6144-405A-A34E-D54A506710E0}"
         "UpgradeCode" = "8:{DBFDA872-1413-4416-ACCC-E30D42DF8738}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

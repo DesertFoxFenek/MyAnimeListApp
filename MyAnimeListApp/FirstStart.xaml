@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="FStext" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="41,52,0,0" TextWrapping="Wrap" Text="Pierwsze uruchomienie" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display" FontStyle="Normal" FontWeight="Normal" FontSize="10" TextAlignment="Center" Foreground="#FFDDDDDD"/>
         <Button x:Name="EntryC" Grid.Column="2" Content="Potwierdzam" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Height="41" Width="121" Click="Enter"/>
-        <Button x:Name="ToEN" Content="PL -> EN" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="399,10,0,0" VerticalAlignment="Top" FontSize="9" Click="ChangeEN"/>
+        <Button x:Name="ToEN" Content="PL -> EN" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="399,10,0,0" VerticalAlignment="Top" FontSize="9" Click="ChangeEN" Visibility="Hidden"/>
 
     </Grid>
 </Window>
